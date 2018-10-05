@@ -22,10 +22,17 @@ $(document).ready(function(e) {
       ctx.fillText(myMessage, x, y + 7.5);
     });
 
-    $("#myDownload").on("click", function() {
-      var canvas = document.getElementById("myCanvas");
-      var fullQuality = canvas.toDataURL("image/png", 1.0);
-      window.open(fullQuality);
-    });
+    function downloadCanvas(link, canvasId, filename) {
+      link.href = document.getElementById(canvasId).toDataURL();
+      link.download = filename;
+    }
+
+    document.getElementById("myDownload").addEventListener(
+      "click",
+      function() {
+        downloadCanvas(this, "myCanvas", "test.jpg");
+      },
+      false
+    );
   })(jQuery);
 });
