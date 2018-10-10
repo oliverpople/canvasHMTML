@@ -19,6 +19,7 @@ $(document).ready(function(e) {
       ctx.font = "30px Arial";
       ctx.textAlign = "center";
       // ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillText(myMessage, x, y + 7.5);
     });
 
