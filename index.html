@@ -3,23 +3,26 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="../CanvasHTML/canvas.js"></script>
+<link rel="stylesheet" type="text/css" href="../CanvasHTML/canvas.css" media="screen" />
 </head>
 <body>
-  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-  </canvas>
-  <form id="myForm">
-    <div class="form-group">
-      <label for="myMessage">Message</label>
-      <input type="text" name="myMessage" id="myMessage"/>
-    </div>
-    <button type="submit">
-      Add Text
-    </button>
-  </form>
+  <div id="canvasWrapper" class="shadow">
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+    <form id="myForm">
+      <div class="form-group">
+        <label for="myMessage">Message</label>
+        <input type="text" name="myMessage" id="myMessage"/>
+      </div>
+      <button type="submit">
+        Add Text
+      </button>
+    </form>
 
-  <hr/>
-  <button type="button">
-    <a id="myDownload">Download</a>
-  </button>
+    <hr/>
+    <button type="button">
+      <a id="myDownload">Download</a>
+    </button>
+  </div>
 </body>
 </html>
