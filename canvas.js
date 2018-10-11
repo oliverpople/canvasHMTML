@@ -16,7 +16,7 @@ $(document).ready(function(e) {
       gradient.addColorStop("1.0", "red");
       // Fill with gradient
       ctx.fillStyle = gradient;
-      ctx.font = "30px Arial";
+      ctx.font = "120px helvetica";
       ctx.textAlign = "center";
       // ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -31,7 +31,8 @@ $(document).ready(function(e) {
     document.getElementById("myDownload").addEventListener(
       "click",
       function() {
-        downloadCanvas(this, "myCanvas", "test.jpg");
+        var myMessage = $("#myMessage").val();
+        downloadCanvas(this, "myCanvas", myMessage + ".jpg");
       },
       false
     );
